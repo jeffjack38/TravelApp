@@ -1,0 +1,15 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1 th:text="'Welcome, ' + ${username} + '!'"></h1>
+        <a href="/blog">Blog page</a>
+        <a href="/index">Index </a>
+        <a href="#">Destinations</a>
+        <a href="#">Booking History</a>
+</body>
+</html>
