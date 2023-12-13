@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+</head>
+<body>
+    <h1>Booking Confirmation</h1>
+    
+    <!-- Display booking details -->
+    <p th:text="${booking.name + ' - ' + booking.destination.name + ' - ' + booking.startDate + ' to ' + booking.endDate}"></p>
+
+    <!-- Other booking details -->
+
+    <!-- Link to go back to the home page -->
+    <a href="/" th:href="@{/}">Back to Home</a>
+</body>
+</html>

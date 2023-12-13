@@ -1,0 +1,27 @@
+<!-- src/main/resources/templates/destination.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="header">
+        <h1>Destination Details</h1>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <h2 th:text="${destination.name}"></h2>
+            <p th:text="${destination.location}"></p>
+            <p th:text="'Price: $' + ${destination.price}"></p>
+            <p th:text="'Description: ' + ${destination.description}"></p>
+        </div>
+    </div>
+
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

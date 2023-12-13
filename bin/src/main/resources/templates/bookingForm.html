@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+</head>
+<body>
+    <h1>Booking Form</h1>
+    
+    <!-- Booking form -->
+    <form action="/book" method="post" th:object="${booking}">
+        <!-- Dropdown to select destination -->
+        <label for="destination">Select Destination:</label>
+        <select id="destination" name="destination.id">
+            <option th:each="destination : ${destinations}" th:value="${destination.id}" th:text="${destination.name + ' - ' + destination.location}"></option>
+        </select>
+        
+        <!-- Other form fields for trip details -->
+
+        <!-- Submit button -->
+        <button type="submit">Submit Booking</button>
+    </form>
+</body>
+</html>
